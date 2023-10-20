@@ -6,7 +6,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.compose.navigation.ui.screen.HomeScreen
 import com.compose.navigation.ui.screen.LoginScreen
 
 @Composable
@@ -17,13 +16,13 @@ fun SetupNavGraph(navController: NavHostController) {
         }
 
         composable(route = Screens.HomeScreen.route, arguments = listOf(
-            navArgument(TEXT) {
+            navArgument(USER) {
                 type = NavType.StringType
                 defaultValue = ""
                 nullable = true
             }
         )) {
-            HomeScreen(it.arguments?.getString(TEXT) ?: "")
+            HomeRoute(userName = it.arguments?.getString(USER) ?: "")
         }
     }
 }
