@@ -8,6 +8,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.compose.navigation.ui.screen.HomeScreen
+import com.compose.navigation.ui.screen.LoginScreen
 import com.compose.navigation.ui.theme.NavigationTheme
 
 class MainActivity : ComponentActivity() {
